@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+:root{
+    --basecolor: #047aed;
+    --highlight:2px solid red;
+    --boxshadow:0px 3px 10px rgba(0,0,0,0.2);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+a{
+    text-decoration: none;
+  
+}
+ul{
+    list-style-type: none;
+}
+p{
+    margin: 10px 0;
+}
+img{
+    width: 100%;
+}
+/* ======NAVBAR======= */
+nav{
+    background-color:var(--basecolor);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4%;
+    align-items: center;
+    height: 70px;
+}
+nav h1{
+    color: #fff;
+    font-weight: 300;
+    font-size: 2rem;
+}
+nav ul{
+    display: flex;
+}
+nav ul a{
+    padding: 10px;
+    color: #fff;
+    margin:0 5px;
+    border: 0;
+    transition: all 2s ease-in-out;
+}
+nav ul a:hover{
+    border-bottom: 2px solid #fff;
+}
+/* =======HERO SECTION======== */
+.hero{
+    background-color: var(--basecolor);
+    height: 400px;
+    color: #fff;
+    position: relative;
+    
+}
+.hero::before,.hero::after{
+    content: "";
+    position: absolute;
+    height: 100px;
+    background-color: white;
+    bottom: -60px;
+    left: 0;
+    right: 0;
+    transform: skewY(-3deg);
+}
+.hero-text{
+    animation: slideInFromLeft 2s;
+}
+.hero h1{
+    font-size: 40px;
+    font-weight: 300;
+}
+.hero p{
+    margin: 20px 0;
+}
+
+
+
+.hero-form{
+    height: 350px;
+    width: 400px;
+    position: relative;
+    top: 60px;
+    z-index: 100;
+    animation: slideInFromRight 2s;
+}
+input[type="email"],input[type="text"]{
+    border: 0;
+    border-bottom: 2px solid #333;
+    width: 100%;
+    font-size: 16px;
+    padding: 3px;
+}
+input[type="email"]:focus,input[type="text"]:focus{
+    outline: none;
+}
+.input-control{
+    margin: 30px 0;
+}
+.hero-form h2{
+    font-weight: 300;
+}
+
+.btn:hover{
+    transform: scale(0.8);
+}
+.btn-hero-text{
+    background: transparent;
+    border: 1px solid white;
+}
+/* ======STATS======= */
+.stats{
+    padding: 100px;
+    animation: slideInFromBottom 2s;
+    
+}
+.stats-heading{
+    text-align: center;
+    font-weight: normal;
+    max-width: 500px;
+    margin: 1.5rem auto;
+}
+.grid-3 h3{
+    font-size: 35px;
+}
+.grid-3 p{
+    font-size: 20px;
+    color: blue;
+}
+/* ====CLI===== */
+.cli .grid{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.cli .grid img{
+    grid-column: 1/ span 2;
+    grid-row: 1/ span 2;
+}
+.cloud{
+    background-color: var(--basecolor);
+}
+.cloud .grid{
+    grid-template-columns: 2fr 1fr;
+    color: white;
+}
+.cloud-text-area h3{
+font-size: 3.2rem;
+font-weight:300;
+
+}
+.cloud-text-area p{
+    font-size: 20px;
+    padding: 0.5rem 0;
+}
+.btn-cloud{
+    background-color: rgb(15, 15, 40);
+}
+/* Languages */
+.languages{
+background-color: #fff;
+}
+.languages h2{
+    font-size: 2rem;
+    padding: 1.5rem;
+}
+.languages .card{
+    margin: 1.2rem 0.5rem 2.5rem;
+    transition: all 0.3s ease-in-out;
+}
+.languages .flex{
+    flex-wrap: wrap;
+}
+.languages .card:hover{
+    transform: translateY(-20px);
+}
+.languages h4{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+/* footer */
+footer p{
+    color: white !important;
+    text-transform: lowercase;
+    font-weight: 300;
+    font-size: 16px !important;
+}
+footer nav{
+    background-color: transparent;
+}
+footer nav ul{
+    flex-direction: column;
+}
+footer nav ul a:hover{
+    border: none;   
+}
+.socials a{
+    margin: 0 10px;
+color: white;
+}
+.fa-github:hover{
+    color: black;
+}
+.fa-linkedin:hover,.fa-twitter:hover{
+    color: #2f567d;
+}
+footer .container{
+    padding: 50px;
+}
+footer .container div{
+    text-align: left;
+}
+footer .container ul{
+    text-align: left;
+}
+/* Animation */
+@keyframes slideInFromLeft{
+    0%{
+transform: translateX(-500px);
+    }
+    100%{
+transform: translateX(0);
+    }
+}
+@keyframes slideInFromRight{
+    0%{
+transform: translateX(500px);
+    }
+    100%{
+transform: translateX(0);
+    }
+}
+@keyframes slideInFromBottom{
+    0%{
+transform: translateY(500px);
+    }
+    100%{
+transform: translateY(0);
+    }
+}
